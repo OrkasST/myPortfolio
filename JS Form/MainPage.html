@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="script.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet"> 
+</head>
+<body>
+	<nav id="menu" class="appMenu">
+		<img src="images/contact_new_icon_180793.svg" width="100" height="100" id="newCustomerButton">
+		<img src="images/system_switch_user_icon_180899.svg" width="100" height="100" id="customerListButton">
+	</nav>
+	<main class="mainScreen">
+		<header class="mainHeader">
+			<h1>HOTEL Register<br><i>Web app</i></h1>
+		</header>
+
+		<section class="customersList _hidden" id="customersList">
+			<div class="list">
+			<header class="customersListHeader"><h2>Customers List</h2></header>
+			<article id="customers" class="customers">
+				
+			</article>
+		</div>
+			<div class="changeOrDelete">
+				<input type="text" id="customerIndex" name="index" placeholder="Enter customer's number" required>
+				<button onclick="changeCustomerInfo()">Change</button>
+				<button onclick="deleteCustomer()">Delete</button>
+			</div>
+		</section>
+	</main>
+	<section id="formSection" class="formSection">
+		<form id="survey-form" onsubmit="formResult(event)" class="guestForm">
+			<button type="button" class="close" onclick="closeForm()"><i class="btI"></i><i class="btII"></i></button>
+			<div class="form">
+				<label for="name" id="name-label">Name</label><br>
+				<input type="text" id="name" name="name" placeholder="Enter customer's Name" required>
+			</div>
+			<div class="form">
+				<label for="surname" id="surname-label">Surname</label><br>
+				<input type="text" id="surname" name="surname" placeholder="Enter customer's Surname" required>
+			</div>
+			<div class="form">
+				<label for="email" id="email-label">E-mail</label><br>
+				<input type="email" id="email" name="email" placeholder="Enter customer's E-mail" required>
+			</div>
+			<div class="form">
+				<label for="age">Age</label><br>
+				<input type="number" min="12" max="120" id="age" name="age" placeholder="Enter customer's Age">
+			</div>
+			<div class="form">
+				<label for="room-number">Room number</label><br>
+				<input type="number" min="100" max="1000" id="room-number" name="room" placeholder="Enter customer's Room">
+			</div>
+			<fieldset class="form-radio">
+				<legend>Place to eat</legend>
+
+				<label for="room"><input id="room" type="radio" name="place-to-eat" value="room">Room</label>
+
+				<label for="hotel-restaurant"><input id="hotel-restaurant" type="radio" name="place-to-eat" value="hotel-restaurant">Hotel restaurant</label>
+
+				<label for="other-places"><input id="other-places" type="radio" name="place-to-eat" value="other">Other places</label>
+			</fieldset>
+			<button type="submit" class="button" id="submit">Submit</button>
+		</form>
+	</section>
+</body>
+</html>

@@ -1,0 +1,259 @@
+html {
+  font-size: 62.5%;
+
+}
+
+body {
+  background: url(images/Background.jpg) no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  font-family: 'Ranchers', cursive; 
+}
+
+.appMenu {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  width: 9rem;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+.appMenu img {
+  margin-top: 4rem;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+
+.formButton {
+  position: relative;
+  top: 9rem;
+  left: 3rem;
+
+  width: 15rem;
+  height: 8rem;
+
+  background: transparent;
+  border-style: solid;
+  border-radius: 2rem 0;
+  border-color: #eaeaea;
+  color: #7a7a7a;
+  box-shadow: 0 0 1rem 1rem rgba(161, 161, 161, 0.26), 0 0 0.3rem 0.3rem rgba(161, 161, 161, 0.37);
+
+  font-size: 2rem;
+
+  transition: 0.3s;
+}
+.formButton:hover {
+  background: #09546b;
+  color: #fff;
+}
+/*
+Main content styles
+*/
+
+
+.mainHeader {
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 6rem;
+  color: #e5e5e5;
+  background: rgba(255, 255, 255, 0.0);
+}
+
+._blur {
+  filter: blur(6px);
+}
+
+
+.mainHeader i {
+  display: inline-block;
+  margin-left: 40rem;
+  font-style: normal;
+  font-size: 70%;
+  color: #87cbe0;
+}
+
+.customersList {
+  position: fixed;
+  top: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  height: 90vh;
+  width: 50%;
+  background: transparent;
+  margin: auto;
+
+  font-size: 3rem;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr 1fr;
+  grid-row-gap: 0.5rem;
+}
+.list {
+  border-radius: 1rem;
+  overflow: auto;
+  background: #eee;
+}
+
+.customersList h2 {
+  text-align: center;
+}
+.customersListHeader {
+  margin: 1rem;
+  border-style: solid;
+  border-radius: 1rem;
+
+}
+.customers {
+  font-family: 'TimesNewRoman'; 
+}
+
+.changeOrDelete {
+  background: #eee;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.changeOrDelete input {
+  margin: 0.5rem;
+  width: 20rem;
+}
+.changeOrDelete button {
+  width: 20rem;
+}
+
+.start-button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20rem;
+}
+
+
+/*
+It's start of form styles
+*/
+
+.formSection {
+  position: absolute;
+}
+
+/*close button styles*/
+.close {
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+
+  height: 2.5rem;
+  width: 2.5rem;
+
+  border-style: none;
+  border-radius: 50%;
+  background: transparent;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+.btI, .btII {
+  position: absolute;
+  z-index: 1;  
+  background: #454545;
+  height: 0.2rem;
+  width: 1.7rem;
+  transform-origin: center;
+  display: block;
+}
+.btI {
+  transform: rotateZ(135deg);
+}
+
+.btII {
+  transform: rotateZ(-135deg);
+}
+.close:hover .btI, .close:hover .btII {
+  background: #252525;
+}
+.close:hover {
+  background: #fff;
+}
+/*end of close button styles*/
+
+
+.guestForm {
+  position: fixed;
+  top: 10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-right: 50%;
+  z-index: 100;
+  width: 50rem;
+  padding: 2rem;
+
+  border-style: solid;
+  border-radius: 0.8rem;
+  border-width: 0.05rem;
+  background: #eee;
+
+  box-shadow: 0 0 4rem 1rem rgba(64, 64, 64, 0.3);
+
+  font-family: 'TimesNewRoman';
+  font-size: 2rem;
+  color: #224854;
+
+  animation-name: appear;
+  animation-duration: 0.3s;
+  anination-fill-mode: forwards;
+
+  display: none;
+}
+.form, .form-chk, .form-radio {
+  margin-bottom: 1rem;
+}
+.form input {
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+@keyframes appear {
+  from {
+    transform: translateY(-110%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+/*
+It's end of form styles
+*/
+
+._hidden {
+  display: none;
+}
+
+
+@media(max-width: 1000px) {
+  html {
+    font-size: 32%;
+  }
+  body {
+    background: url(images/Background.jpg) no-repeat;
+    background-size: auto 100%;
+    background-attachment: fixed;
+  }
+}
